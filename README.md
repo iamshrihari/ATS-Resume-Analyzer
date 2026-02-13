@@ -30,7 +30,7 @@ This helps job seekers optimize their resumes for better shortlisting chances.
 ---
 
 ## 📂 Project Structure
-```txt
+```
 ATS-Resume-Analyzer/
 │── app.py
 │── resume_parser.py
@@ -39,64 +39,85 @@ ATS-Resume-Analyzer/
 │── requirements.txt
 │── README.md
 │── screenshots/
-⚙️ How It Works
-User uploads Resume PDF and pastes Job Description
+```
 
-Resume text is extracted using PyMuPDF
+---
 
-Resume text and Job Description are converted into TF-IDF vectors
+## ⚙️ How It Works
+1. User uploads Resume PDF and pastes Job Description
+2. Resume text is extracted using PyMuPDF
+3. Resume text and Job Description are converted into TF-IDF vectors
+4. Cosine similarity is calculated to measure resume-job match
+5. Similarity score is converted into ATS Score (0–100)
+6. Keywords are extracted from both Resume and Job Description
+7. Matched and missing keywords are displayed
+8. Suggestions are generated based on missing keywords
 
-Cosine similarity is calculated to measure resume-job match
+---
 
-Similarity score is converted into ATS Score (0–100)
+## ▶️ How to Run Locally
 
-Keywords are extracted from both Resume and Job Description
-
-Matched and missing keywords are displayed
-
-Suggestions are generated based on missing keywords
-
-▶️ How to Run Locally
-1. Clone Repository
+### 1. Clone Repository
+```bash
 git clone https://github.com/iamshrihari/ATS-Resume-Analyzer.git
 cd ATS-Resume-Analyzer
-2. Create Virtual Environment (Optional but Recommended)
+```
+
+### 2. Create Virtual Environment (Optional but Recommended)
+```bash
 python -m venv venv
-3. Activate Virtual Environment
-Windows (PowerShell)
+```
+
+### 3. Activate Virtual Environment
+
+**Windows (PowerShell)**
+```bash
 venv\Scripts\activate
-Windows (CMD)
+```
+
+**Windows (CMD)**
+```bash
 venv\Scripts\activate.bat
-Mac/Linux
+```
+
+**Mac/Linux**
+```bash
 source venv/bin/activate
-4. Install Dependencies
+```
+
+### 4. Install Dependencies
+```bash
 pip install -r requirements.txt
-5. Run Streamlit App
+```
+
+### 5. Run Streamlit App
+```bash
 streamlit run app.py
-📊 Output
-ATS Score (0–100)
+```
 
-Similarity Match Percentage
+---
 
-Matched Keywords
+## 📊 Output
+- ✅ ATS Score (0–100)
+- ✅ Similarity Match Percentage
+- ✅ Matched Keywords
+- ✅ Missing Keywords
+- ✅ Improvement Suggestions
 
-Missing Keywords
-
-Improvement Suggestions
+---
 
 ## 📸 Screenshots
 ![ATS Output](screenshots/scr1.png)
 ![ATS Output](screenshots/scr2.png)
 ![ATS Output](screenshots/scr3.png)
 
-🎯 Future Improvements
-Skill extraction using predefined skill database
+---
 
-PDF report generation
-
-Resume section detection (Education, Skills, Experience)
-
-Deployment on Streamlit Cloud
+## 🎯 Future Improvements
+- Skill extraction using predefined skill database
+- PDF report generation
+- Resume section detection (Education, Skills, Experience)
+- Deployment on Streamlit Cloud
 
 BERT-based semantic matching for better scoring
 
