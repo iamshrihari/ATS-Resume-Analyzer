@@ -84,6 +84,11 @@ Missing Keywords
 
 Improvement Suggestions
 
+## 📸 Screenshots
+![ATS Output](screenshots/scr1.png)
+![ATS Output](screenshots/scr2.png)
+![ATS Output](screenshots/scr3.png)
+
 🎯 Future Improvements
 Skill extraction using predefined skill database
 
