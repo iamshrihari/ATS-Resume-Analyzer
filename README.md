@@ -30,6 +30,7 @@ This helps job seekers optimize their resumes for better shortlisting chances.
 ---
 
 ## 📂 Project Structure
+```txt
 ATS-Resume-Analyzer/
 │── app.py
 │── resume_parser.py
@@ -38,35 +39,28 @@ ATS-Resume-Analyzer/
 │── requirements.txt
 │── README.md
 │── screenshots/
+⚙️ How It Works
+Extracts resume text from PDF
 
+Converts resume and job description into TF-IDF vectors
 
----
+Computes similarity score using cosine similarity
 
-## ⚙️ How It Works
-1. Extracts resume text from PDF
-2. Converts resume and job description into TF-IDF vectors
-3. Computes similarity score using cosine similarity
-4. Converts similarity score into ATS Score
-5. Extracts keywords from both resume and job description
-6. Shows missing and matched keywords
+Converts similarity score into ATS Score
 
----
+Extracts keywords from both resume and job description
 
-## ▶️ How to Run Locally
+Shows missing and matched keywords
 
-### 1. Clone Repository
-```bash
+▶️ How to Run Locally
+1. Clone Repository
 git clone https://github.com/iamshrihari/ATS-Resume-Analyzer.git
 cd ATS-Resume-Analyzer
-
 2. Install Dependencies
 pip install -r requirements.txt
-
 3. Run Streamlit App
 streamlit run app.py
-
 🎯 Future Improvements
-
 Skill extraction using predefined skill database
 
 PDF report generation
@@ -78,6 +72,5 @@ Deployment on Streamlit Cloud
 BERT-based semantic matching for better scoring
 
 👨‍💻 Author
-
 Shrihari Padatare
 GitHub: https://github.com/iamshrihari
