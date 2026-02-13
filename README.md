@@ -8,24 +8,24 @@ This helps job seekers optimize their resumes for better shortlisting chances.
 ---
 
 ## 🚀 Features
-✅ Upload Resume in PDF format  
-✅ Paste Job Description  
-✅ Calculates ATS Score (0–100)  
-✅ TF-IDF + Cosine Similarity Matching  
-✅ Extracts Resume Keywords & JD Keywords  
-✅ Shows Matched and Missing Keywords  
-✅ Suggests missing skills/keywords  
-✅ Streamlit-based UI (easy to use)
+- ✅ Upload Resume in PDF format  
+- ✅ Paste Job Description  
+- ✅ Calculates ATS Score (0–100)  
+- ✅ TF-IDF + Cosine Similarity Matching  
+- ✅ Extracts Resume Keywords & JD Keywords  
+- ✅ Shows Matched and Missing Keywords  
+- ✅ Suggests missing skills/keywords  
+- ✅ Streamlit-based UI (easy to use)
 
 ---
 
 ## 🛠 Tech Stack
-- **Python**
-- **Streamlit**
-- **PyMuPDF** (PDF text extraction)
-- **Scikit-learn**
-- **TF-IDF Vectorizer**
-- **Cosine Similarity**
+- Python  
+- Streamlit  
+- PyMuPDF (PDF text extraction)  
+- Scikit-learn  
+- TF-IDF Vectorizer  
+- Cosine Similarity  
 
 ---
 
@@ -40,26 +40,50 @@ ATS-Resume-Analyzer/
 │── README.md
 │── screenshots/
 ⚙️ How It Works
-Extracts resume text from PDF
+User uploads Resume PDF and pastes Job Description
 
-Converts resume and job description into TF-IDF vectors
+Resume text is extracted using PyMuPDF
 
-Computes similarity score using cosine similarity
+Resume text and Job Description are converted into TF-IDF vectors
 
-Converts similarity score into ATS Score
+Cosine similarity is calculated to measure resume-job match
 
-Extracts keywords from both resume and job description
+Similarity score is converted into ATS Score (0–100)
 
-Shows missing and matched keywords
+Keywords are extracted from both Resume and Job Description
+
+Matched and missing keywords are displayed
+
+Suggestions are generated based on missing keywords
 
 ▶️ How to Run Locally
 1. Clone Repository
 git clone https://github.com/iamshrihari/ATS-Resume-Analyzer.git
 cd ATS-Resume-Analyzer
-2. Install Dependencies
+2. Create Virtual Environment (Optional but Recommended)
+python -m venv venv
+3. Activate Virtual Environment
+Windows (PowerShell)
+venv\Scripts\activate
+Windows (CMD)
+venv\Scripts\activate.bat
+Mac/Linux
+source venv/bin/activate
+4. Install Dependencies
 pip install -r requirements.txt
-3. Run Streamlit App
+5. Run Streamlit App
 streamlit run app.py
+📊 Output
+ATS Score (0–100)
+
+Similarity Match Percentage
+
+Matched Keywords
+
+Missing Keywords
+
+Improvement Suggestions
+
 🎯 Future Improvements
 Skill extraction using predefined skill database
 
